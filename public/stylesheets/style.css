@@ -1,0 +1,93 @@
+body 
+{
+  font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+  font-size: 15px;
+  width:70%;
+  margin:0 auto;
+  color: #0B615E;
+}
+
+div
+{
+  margin-top:15px;  
+}
+
+#pendingTaskform, #taskform
+{
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding:5px;
+}
+
+h1
+{
+  text-align:center;
+}
+
+#newtask
+{
+  width:305px;
+  margin-right:50px;	
+}
+
+#newDue
+{
+  width:250px;
+}
+
+#createButton
+{
+  width:100px;
+  float:right;
+  text-align:center;
+}
+
+legend
+{
+  font-weight: bold;
+}
+
+fieldset
+{
+  padding:10px;
+  border: 1px solid grey; /*#B43104;*/
+  border-radius: 5px;
+}
+
+#taskPending, #task, #taskDate
+{
+  display:inline-block;
+}
+
+#taskPending, #task, #taskDate 
+{
+  width:33%;
+  text-align:center;
+}
+
+#doneButton
+{
+  width:100px;
+  float:right;
+}
+
+
+#pendingTaskform
+{
+  background-color: #FA5858;
+}
+
+ul 
+{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+
+li
+{
+  border-radius:5px;
+  border: 1px solid grey;
+  padding:5px;
+  margin-bottom:8px;
+}

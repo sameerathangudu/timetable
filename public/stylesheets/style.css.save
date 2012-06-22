@@ -1,0 +1,37 @@
+body 
+{
+  font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+  font-size: 13px;
+  width:70%;
+  margin:0 auto;
+  color: #0B615E;
+}
+
+h1
+{
+  text-align:center;
+}
+
+#newtask
+{
+  width:300px;
+  margin-right:20px;	
+}
+
+#newDue
+{
+  width:250px;
+}
+
+#createButton
+{
+  width:100px;
+  float:right;
+  text-align:center;
+}
+
+legend
+{
+  
+}
+

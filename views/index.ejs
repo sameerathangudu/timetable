@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+</head>
+
+<body>
+
+<h1> Timetable </h1>
+
+<div id="createTask"> 
+
+   <fieldset id="createFS">
+   <legend>Create a new task:</legend>
+
+   <form method="post" action="addTask">
+     <label id="newTasklabel">Task:</label><input id="newtask" name="taskName" type="text" value=""/>
+     <label>Due date:</label><input id="newDue" name="dueDate" type="date" value=""/>
+     <input id="createButton" type="submit" value="Create"/>
+   </form>
+
+   </fieldset>
+
+-</div>
+
+<div id="pendingTasks">
+
+<fieldset>
+<legend>Pending tasks:</legend>
+
+<% for(var i=0; i<tasks.length; i++) { var current = new Date(); %>
+<% var date = tasks[i].dueDate;
+date =  date.split("-").join();
+var date = new Date(date); if(date<current) {  %>
+<form id="pendingTaskform" method="post" action="updateTask">
+<%  } else { %>
+
+<form id="taskform" method="post" action="updateTask">
+<%  } %>
+   <label id="task">
+   <%= tasks[i].taskName %></label><input type="hidden" name="id" value="<%= tasks[i]._id %>"/>
+   <span id="taskDate"><%= tasks[i].dueDate %></span>
+   <input id="doneButton" type="submit" value="Done"/></li>
+
+</form></br>
+
+<% } %>
+</fieldset>
+
+</div>
+
+<div id="completedTasks">
+
+   <fieldset>
+   <legend>Completed tasks:</legend>
+
+   <ul>
+   <% for(var i=0; i<completed.length; i++) { %>
+      <li><%= completed[i].taskName %></li>
+   <% } %>
+   </ul>
+
+   </fieldset>
+
+</div>
+
+</body>
+</html>
